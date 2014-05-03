@@ -9,11 +9,15 @@ defmodule DoseFramework.Mixfile do
   end
 
   def application do
-    [ applications: [:cowboy],
+    [ applications: [:cowboy, :ex_doc],
       mod: {DoseFramework, []} ]
   end
 
   defp deps do
-    [{:cowboy, github: "extend/cowboy"}]
+    [
+      {:cowboy, github: "extend/cowboy"},
+      {:ex_doc, github: "elixir-lang/ex_doc"}
+
+      ]
   end
 end
