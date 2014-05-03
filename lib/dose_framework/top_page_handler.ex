@@ -4,7 +4,8 @@ defmodule DoseFramework.TopPageHandler do
   end
 
   def handle(req, state) do
-    {:ok, req} = :cowboy_req.reply(200, [], "Hello Cowboy!", req)
+    image = File.read! "priv/cowboy-home.png"
+    {:ok, req} = :cowboy_req.reply(200, [], image, req)
     {:ok, req, state}
   end
 
