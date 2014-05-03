@@ -9,7 +9,7 @@ defmodule DoseFramework.Mixfile do
   end
 
   def application do
-    [ applications: [],
+    [ applications: [:cowboy],
       mod: {DoseFramework, []} ]
   end
 
