@@ -5,7 +5,9 @@ defmodule DoseFramework.TopPageHandler do
 
   def handle(req, state) do
     image = File.read! "priv/cowboy-home.png"
-    {:ok, req} = :cowboy_req.reply(200, [], image, req)
+    markdown_file = File.read! "priv/docker_tutorial.md"
+    markdown_html = Markdown.to_html markdown_file
+    {:ok, req} = :cowboy_req.reply(200, [], markdown_html, req)
     {:ok, req, state}
   end
 
