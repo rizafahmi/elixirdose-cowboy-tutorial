@@ -1,3 +1,3 @@
 # DoseFramework
 
-Code to follow along ElixirDose.com Cowboy Tutorial.
+Code to follow along [ElixirDose.com](http://elixirdose.com/) Cowboy Tutorial.
